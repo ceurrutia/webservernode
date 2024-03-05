@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Comisión 23004 G8">
+  <meta name="description" content="Anime search">
+  <link rel="icon" type="image/png" href="img/icono_16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="img/icono_32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/icono_48.png" sizes="48x48">
+  <link rel="icon" type="image/png" href="img/icono_64.png" sizes="64x64">
+  <link rel="icon" type="image/png" href="img/icono_128.png" sizes="128x128">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Animación título página animate.style -->
+  <script src="https://kit.fontawesome.com/0471e319aa.js" crossorigin="anonymous"></script>
+  <title>TP Final Fullstack Python 2023</title>
+
+</head>
+
+<body onload="initListAnime()">
+
+  <header id="idheader"></header>
+
+  <main>
+    <!-- Carousel para imágenes -->
+    <div class="content-carousel">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores de abajo de imagen  -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- diapositivas -->
+        <div class="carousel-inner">
+
+          <div class="item active">
+            <img src="img/psycho.jpg" alt="Psycho Pass">
+          </div>
+
+          <div class="item">
+            <img src="img/fullmalch.jpg" alt="Vinland Saga imagen">
+          </div>
+
+          <div class="item">
+            <img src="img/pyschopass.jpg" alt="foto Psycho Pass">
+          </div>
+
+          <!-- botones de desplazamiento a izquierda y derecha -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="transparent-box-index">
+        <h1 class="animate__animated animate__pulse animate__slower animate__infinite"> <span> アニメ </span> search </h1>
+        <h3> Realizado en Codo a Codo 4.0 <br>Full stack Python Comisión 23004 </h3>
+        <h4> Utilizamos la API de <span>JIKAN</span> para la búsqueda de animes </h4>
+      </div>
+
+    </div>
+
+    <article>
+      <h3> Buscá tus animes preferidos </h3>
+      <p>La API de Jikan va a encontrar tu anime <strong>si lo escribes con su título<br> en inglés o en japonés romanji </strong>  (Ej. Vinland Saga, Kimetsu no Yaiba) </p>
+
+      <form class="search_items">
+        <label><p>Buscá por título </p></label>
+        
+        <input id="searchTitulo" type="text" placeholder="Ingresá título..." label="title" >
+      </form>
+      <button id="btnSearch" type="submit" class="btn-yellow">Buscar</button>
+
+    </article>
+
+
+    <!-- listado de animes resultados de busqueda  -->
+    <div id="list-anime">
+      <!-- Se rellena en interaccionAPI.js -->
+    </div>
+
+    
+    <div class="related">
+      <br>
+      <h1 class="animate__animated animate__bounceIn animate__slower animate__infinite"> Nuevos 2023 </h1>
+
+      <div class="card">
+        <img src="https://ramenparados.com/wp-content/uploads/2019/08/Jigokuraku-destacado-e1566484672860-1000x600.jpg"
+          alt="Jigokuraku">
+        <h3> Jigokuraku Hell's Paradise</h3>
+        <p> En tiempos finales de la era Edo, un shinobi muy poderoso, el temible Gamibaru, es capturado por ser
+          desertor. En estas circunstancias, la decapitadora Yamada Asaemon Sagiri, le impone una condición para lograr
+          la completa absolución de sus crímenes. </p>
+        <button><a href="interna-novedad.html">Ver más</a></button>
+      </div>
+      <div class="card">
+        <img src="https://tierragamer.com/wp-content/uploads/2023/06/demon-slayer-kimetsu-no-yaiba-tercera-temporada-cuantos-episodios.jpg" alt="kimetsu">
+        <h3> Kimetsu No Yaiba - Arco de la villa de los herreros </h3>
+        <p> Tanjiro debe viajar a la aldea donde residen los herreros con el fin de encontrarse con la persona
+          responsable es preparar su espada nichirin. En el lugar, se encuentra con varios Cazadores de Demonios y dos
+          importantes Pilares. </p>
+        <button
+          onclick="window.open('https://www.crunchyroll.com/es/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba')">Ver en
+          Crunchyroll</button>
+      </div>
+      <div class="card">
+        <img src=" https://i.blogs.es/ab3ad4/tokyo-revengers/1366_2000.jpeg"
+          alt="Tokyo">
+        <h3> Tokyo Revengers - Arco Christmas Showdown </h3>
+        <p> Cada semana llega un nuevo lanzamiento para completar los 13 episodios en total que tendrá la segunda
+          temporada de Tokyo Revengers. </p>
+        <button onclick="window.open('https://www.starplus.com/es-419/series/tokyo-revengers/4HFbN55sAh0i')">Ver en Star
+          Plus</button>
+      </div>
+      
+
+    </div>
+
+  </main>
+
+  <footer id="idfooter"></footer>
+
+  <script src="js/codigo.js"></script>
+  <script src="js/interaccionAPI.js"></script>
+
+ </body>
+
+</html>

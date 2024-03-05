@@ -1,0 +1,798 @@
+*{
+  left: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; 
+  margin:0; 
+}
+
+html{
+  background-color: white;
+}
+
+/*---- Menu hamburguesa -------*/
+.btn-hamb{
+  visibility:hidden;
+  position: absolute;
+  top: 5px;
+  left: 92vw;
+  background-color: #303F9F;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end; 
+  width: 40px; 
+  height: 40px;
+  box-sizing: border-box; 
+}
+
+.menu-toggle {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Hago cambio de barritas a X para cerrar */
+.menu-icon.active .line-1 {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-icon.active .line-2 {
+  opacity: 0;
+}
+
+.menu-icon.active .line-3 {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Muestro el menu entrando por la derecha */
+nav.active {
+  display: block;
+  left: 77vw;
+  z-index: 9999;
+}
+/*-----------------------------*/
+
+
+.content-carousel{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.transparent-box-index{
+  background-color: #333333;
+  opacity:0.8;
+  color:white;
+  padding:30px;  
+  width: 60%;
+  position:absolute;
+  top: 13vh;
+  left: 18vw;
+  font-size:1.2em;
+  text-align:center;
+}
+
+.transparent-box{
+  background-color: #333333;
+  opacity:0.8;
+  color:white;
+  padding:30px;
+  width:60%;
+  position:absolute;
+  top: 21vh;
+  left: 18vw;
+}
+
+.transparent-box-index span, .transparent-box span{
+  font-weight:bold; 
+  color:#FFC107;
+}
+
+.header-contacto h1{
+  color: #333;
+  font-size:3.3em;
+  text-align:center;
+}
+
+.header-contacto h3{
+  color: #333;
+  font-size:2.3em;
+  text-align:center;
+  }
+
+.header-contacto span{
+  font-weight:bold; 
+  color:#FFC107;
+}
+
+/*---Carousel ---*/
+.item > img{
+  width:100%; 
+}
+
+.wrap-img{
+  width:100%;
+  margin:0;
+  padding-top:50px;
+  min-height:350px;
+}
+
+/* Imagenes para los encabezados de las páginas */
+.wrap1{
+  background-image: url(https://i.blogs.es/0ecab2/chainsaw-man/1366_2000.jpeg);
+}
+
+.wrap2{
+  background-image: url(https://images-na.ssl-images-amazon.com/images/S/pv-target-images/c912a1ce1d58e50f37495f640cb61839c7183adb78470593267cabaedf4fd3c8._RI_V_TTW_.jpg);
+}
+
+.wrap3{
+  background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1792974219414422498/CAE511BEEA191EA0700CCF536D00980B459CAADC/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+}
+
+.wrap4{
+  background-image: url(https://hips.hearstapps.com/hmg-prod/images/hells-paradise-jigokuraku-1-6496e9159c24f.jpg?resize=980:*);
+}
+
+
+/*--- MENU ---*/
+nav {
+  background-color: #303F9F;
+  color: #fff;
+  height: 50px;
+  font-weight:bold;
+  font-size:1.1em; 
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 50px;
+  color: white;
+  text-decoration: none;
+  font-size:1.1em;
+}
+
+nav ul li a:hover {
+  background-color: #FFC107;
+  color:#000;
+  text-decoration: none; 
+  font-size:1.1em; 
+}
+/*--------*/
+
+
+h1 {
+  font-size:2.5em;
+  font-weight: bold;
+  color:white; 
+  text-align: center;
+  margin:20px;
+  padding:10px;
+}
+
+h2{
+  font-size:1.8em; 
+  color:white; 
+  text-align: center;
+  margin:20px;
+  padding:10px;
+}
+
+h3{
+  font-size:1.3em;
+  font-weight: normalr; 
+  color:white; 
+  text-align: center;
+  margin:20px;
+  padding:10px;
+}
+
+h5{
+  font-size:0.8em;
+  color:white; 
+  text-align: center;
+  margin:20px;
+  padding:5px;
+}
+
+p {
+	font-size:1em;
+  color:#333;
+  padding:20px;
+}
+
+article{
+  width: 85%;
+  margin: 20px auto;
+  border-radius: 12px;
+  background-color: #303F9F;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+article h3{
+  color: #FFC107;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+article p{
+  color: white;
+  font-size: 1.3em;
+}
+
+.search_items{
+  margin: 0;
+  font-size:1em;
+}
+
+.search_items label, input, button {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button, input, select{
+color:#333333;
+width:100%;
+}
+
+#searchTitulo, textarea{
+  color:#333333;
+  width:50%;
+  }
+
+.btn-yellow{
+  background-color:#FFC107;
+  color: #333;
+  border: 1px solid #efefef;
+  padding:10px;
+  font-size:1.2em;
+  font-weight: bolder;
+  cursor:pointer;
+  border-radius:10px;
+  align-items: left;
+  width:45%;
+}
+
+.btn-yellow:hover{
+  background-color: black;
+  border: 1px solid #efefef;
+  color: white;
+  cursor:pointer;
+}
+
+/* --- Resultados de la busqueda de animes con la API JIKAN ---*/
+#list-anime{
+  width: 100%;
+  background-color: grey;
+  color:white;
+  border:2px solid #efefef;
+  margin:auto;
+  padding:20px;
+  margin-bottom:20px;
+  height:110vh;
+}
+
+/* Mensaje de no hay películas */
+#list-anime h1{
+  font-weight: bold;
+  font-size: 5em;
+  text-align: center;
+  margin-top: 30vh;
+}
+
+.card-result {
+  width: 32%;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #efefef;
+  border-radius: 10px;;
+  float: left;
+  margin: 10px;
+  padding: 20px;
+  height: auto;
+  flex-direction: column;
+  
+}
+
+.card-result img{
+  width: 75%;
+  padding: 10px;
+}
+
+.card-result h3{
+  color: #232323;
+  text-align: left;
+  margin: 0;
+}
+
+.card-result p{
+  color:#232323;
+  margin:10px;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0;
+}
+
+.card-result a{
+  color: orange;
+  text-decoration: none;
+  font-style:italic;
+  font-weight: bolder;
+  font-size: 16px;
+}
+/* ---------------------------- */
+
+/* ------ Cards --------*/
+.related{
+  width:100%;
+  background-color:#e9b61d;
+  color:#333;
+  padding:10px;
+  height:138vh;
+}
+
+.related h1{
+  color: black;
+  font-weight: bolder;
+  font-size: 4vh;
+}
+
+.related button{
+  background-color: #303F9F;
+  color:white;
+  cursor:pointer;
+  border:0;
+  border-radius: 10px;
+  margin:10px;
+  padding: 20px;
+  font-size:1em;
+  font-weight: bolder;
+  margin: 2%;  
+}
+
+.card, .card2 {
+  width: 26%;
+  background-color: #fff;
+  color:#333;
+  border:1px solid #efefef;
+  border-radius: 10px;
+  float:left;
+  margin: 2% auto 2% 5%;
+  padding:20px;
+  height:auto;
+}
+
+.card a, .card2 a{
+  color: white;
+  text-decoration: none;
+}
+
+.card button:hover, .card a:hover, .card-interna button:hover, .card2 button:hover, .card2 a:hover, .card2-interna button:hover{
+  background-color: #FFC107;
+  color: black;
+  text-decoration: none;
+}
+
+.card img{
+  margin:20px;
+  width:90%;
+  height: 40%;
+}
+
+.card h3, .card2 h3{
+  text-align: left;
+  color:#333333;
+  font-weight: bolder;
+}
+
+.card h2, .card2 h2 {
+  margin-top: 0;
+}
+
+.card p, .card2 p {
+  margin-bottom: 0;
+}
+
+.card-interna{
+  width:80%;
+  margin:auto;
+  background-color: #fff;
+  border-radius: 5px;
+  border:1px solid #efefef;
+  padding: 20px;
+  margin: auto;
+  color:#333;
+}
+
+.card-interna h3, .card-interna p{
+  text-align: left;
+  color: #333;
+}
+
+.card2 img{
+  float:right;
+  height: 10vh;
+  border-radius: 40px;
+}
+
+.card2:hover{
+  transform:
+    perspective(1500px)
+    rotateX(5deg)
+}
+
+/* --------------------------- */ 
+
+/* ---- Contacto datos --- */
+.InputData{
+  width: 75%;
+  margin: 5px auto;
+  border-radius: 12px;
+  background-color: #303F9F;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#datosP{
+  color: #FFC107;
+  font-weight: bold;
+}
+
+.InputData label{
+  display: block;
+  margin:10px;
+}
+
+.InputData input {
+  width: 75%;
+  margin:10px auto;
+  border-radius: 5px;
+  border:1px solid #efefef;
+  padding:20px;
+  font-size:1em;
+  font-weight: bolder;
+}
+
+.InputData input:focus{
+  border:2px solid #FFC107;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255, 238, 0, 0.6);
+  outline: 0 none;
+}
+
+.InputData button {
+  margin-left: 0;
+  margin-top: 3vh;
+  background-color:#FFC107;
+  color: #333;
+  border: 1px solid #efefef;
+  padding:20px;
+  font-size:1em;
+  font-weight: bolder;
+  cursor:pointer;
+  border-radius:10px;
+}
+
+.mapa-content{
+  width:100%;
+  text-align:center;
+  background-color:#232323;
+  min-height:300px;
+  font-size: 1.2em;
+  justify-content: center;
+  padding:30px;
+  margin:auto;
+}
+
+.mapa-content p, a{
+  color:white;
+}
+
+#DirOficce:hover{
+  color: #FFC107;
+}
+
+.mapas{
+  width: 50%;
+  min-height: 30vh;
+}
+/* ------ Fin Contacto ------------------
+
+
+/* Tabla en pantalla de datos enviados Show_data */
+#table-feedback{
+  border: 2px solid black;
+  border-collapse: separate;
+  margin: 0 auto;
+  width: 226px;
+}
+/* Para hacerla tipo zebra */
+tbody tr:nth-child(odd) {
+  background: rgb(241, 240, 240);
+  color: black;
+}
+tbody tr:nth-child(even) {
+  background:#c7c5c5;
+}
+/* Para el título */
+tbody tr:first-child{
+  background: rgb(172, 170, 170);
+  color: black;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  height: auto;
+  line-height: 50px;
+  bottom:0;
+  padding:30px;
+  margin:0;
+  width:100%;
+}
+
+footer p{
+  color:white;
+  font-size:0.8em;
+  text-align: center;
+}
+
+footer a{
+  color: #fff;
+  margin-right: 30px;
+}
+
+.social_networks:hover{
+  color: #FFC107;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 700px){
+  .transparent-box-index{
+    display: none;
+  }
+  nav.active {
+    display: block;
+    left: 65vw!important;
+    z-index: 9999;
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .btn-hamb{
+    visibility:visible;
+  }
+  nav {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    top: 50px; 
+    left: 1200px;
+    background-color: #0b1662;
+    padding: 20px;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+  nav.active {
+    display: block;
+    left: 77vw;
+    z-index: 9999;
+  }
+
+  .transparent-box-index{
+    padding: 5px;
+    width: 70vw!important;
+    position:fixed;
+    left: 13vw!important;
+  }
+ 
+  .transparent-box{
+    padding: 5px;
+    width: 60vw;
+    position:static!important;
+    margin-left: 20vw!important;
+    margin-top: 5vh!important;
+  }
+
+  .search_items input {
+    display: block;
+    margin-left: 15vw;
+    margin-bottom: 5vh;
+    padding: 10px;
+  }
+  #list-anime{
+    width: 80%;
+    min-height: 205vh!important;
+  }
+  .card-result {
+    margin-left: 8vw;
+    margin-top: 5vh!important;
+    width: 80%;
+  }
+  .related{
+    min-height:220vh;
+  }  
+  .card {
+    max-width: 80%;
+    margin-left: 10vw;
+    margin-bottom: 9%;
+    margin-top: 9%;
+  }
+  .card img{
+    margin:10px;
+  }
+  .related-acerca{
+    height:190vh;
+  }
+  .card2{
+    width: 42%;
+    margin-top: 8vh!important;
+  }
+  .related-novedades{
+    min-height:168vh;
+  }
+  .related-contacto{
+    min-height: 55vh;
+  }
+  .list-anime{
+    min-height:138vh!important;
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+  nav {
+    height: auto;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li a {
+    line-height: 30px;
+  }
+ 
+  .transparent-box {
+    padding: 0;
+    position:absolute;
+    top: 23vh!important;
+    left: 20vw;    
+  }
+
+  .transparent-box-index{
+    width: 70vw;
+    position:absolute;
+    top: 7vh!important;
+    left: 13vw;
+  }
+
+  .item > img{
+    height: 40vh!important;
+  }
+  .search_items input {
+    display: block;
+    margin-left: 28vw;
+    width: 32%;
+    padding: 10px;
+    margin-bottom: 3vh;
+  }
+  .search_items button {
+    margin-top: 3vh;
+    margin-left: 6vw;
+  }
+  #list-anime{
+    min-height: 245vh;
+    width: 80%;
+  }
+  .card-result {
+    margin-left: 8vw;
+    margin-top: 3vh;
+    flex-direction: row;
+    width: 80%;
+  }
+  .related{
+    min-height:240vh!important;
+  }
+  .card{
+    margin-left: 10vw;
+    width: 80%;
+    flex-direction: row;
+    margin-top: 6%;    
+  }
+  .card img{
+    margin:10px;
+    padding-left: 5vw;
+  }  
+  .related-acerca{
+    min-height:170vh!important;
+  }
+  .card2{
+    width: 70%;
+    margin: 5vh 15vw 2vh;
+  }
+  .related-novedades{
+    min-height:390vh!important;
+  }
+  .related-contacto{
+    min-height:50vh!important;
+  }
+  .list-anime{
+    min-height: 212vh;
+  }
+}
+
+@media (min-width: 1025px){
+  .related {
+    flex-direction: column;
+    min-height:90vh;
+  }
+  .item > img{
+    height: 75vh!important;
+  }
+   .transparent-box {
+    width:30vw!important;
+    padding: 0;
+    position:absolute;
+    top: 23vh;
+    left: 35vw;    
+  }
+  .transparent-box-index{
+    width: 50vw;
+    height: 44vh;
+    padding: 10px;
+    position: absolute;
+    top: 17vh;
+    left: 22vw;
+  }
+  #list-anime{
+    flex-direction: row;
+  }
+  .card-result {
+    margin-left: 1vw;
+    margin-top: 2vh;
+    width: 30.5%;
+  }
+   .related-acerca{
+    height:105vh;
+  }
+  .related-novedades{
+    height:168vh;
+  }
+  .related-contacto{
+    min-height:50vh;
+  }
+}
+

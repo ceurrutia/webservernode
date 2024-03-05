@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/icono_16.png" sizes="16x16"> 
+  <link rel="icon" type="image/png" href="img/icono_32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/icono_48.png" sizes="48x48">
+  <link rel="icon" type="image/png" href="img/icono_64.png" sizes="64x64">
+  <link rel="icon" type="image/png" href="img/icono_128.png" sizes="128x128">  
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">   <!-- Animación título página animate.style -->
+  <script src="https://kit.fontawesome.com/0471e319aa.js" crossorigin="anonymous"></script>
+  <title>Contacto</title>
+
+</head>
+
+<body onload="document.getElementById('InputName').focus()">
+  <header id="idheader"></header>
+
+	<main>
+
+    <div class="wrap-img wrap4">
+      <div class="transparent-box">
+        <h1 class="animate__animated animate__pulse animate__slower animate__infinite"> <span> アニメ </span> search </h1>
+        <h3> Contacto </h3>
+      </div>
+     </div>
+
+    <div class="related related-contacto">
+      <article>
+
+        <p id="datosP">Dejanos tus datos</p>
+
+        <form class="InputData" action="show_data.html" method="get" target="_self" onsubmit="return validarEmail()">
+          <label for="fNameLName">Nombre y Apellido <sup> *</sup></label>
+          <input type="text" name="name_Lname" id="InputName" placeholder="Ingresá tu nombre y apellido" required minlength="3" maxlength="50">
+          <label for="fEmail">Mail <sup> *</sup></label>
+          <input type="email" name="email" id="InputEmail" placeholder="Ingresá tu email" required maxlength="100">
+          <br>
+          <button type="submit" class="btn-yellow">Enviar</button>
+        </form>
+       
+      </article>
+    </div>
+
+
+  </main>
+
+  <footer id="idfooter"></footer>
+
+  <script src="js/codigo.js"></script>  
+
+</body>
+
+</html>
