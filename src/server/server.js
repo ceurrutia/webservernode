@@ -1,8 +1,10 @@
-const express = require('express')
-const path = require('path')
+import express from 'express'
+import path from 'path'
 
+//const express = require('express')
+//const path = require('path')
 
-const startServer = (options) => {
+export const startServer = (options) => {
     const {port, public_path = 'public'} = options
     
     const app = express()
@@ -23,5 +25,5 @@ const startServer = (options) => {
 }
 
 
-module.exports = {startServer}
+//module.exports = {startServer}
 
